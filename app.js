@@ -83,6 +83,9 @@ app.disable('view cache');
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+
+
 app.get('/', checkAuth, routes.index);
 app.get('/resource/:resource/:subresource', checkAuth, routes.console);
 app.get('/collection/:resource/:subresource', checkAuth, routes.console);
